@@ -4,11 +4,10 @@ function FetchUser() {
   const [data,setData] = useState([]);
 
   const apiGet = ()=> {
-    fetch("https://api.worldoftanks.ru/wot/account/list/?application_id=aa1e24b44bb69aac50de3419c0c1ac07")
+    fetch("https://api.worldoftanks.ru/wot/encyclopedia/tanks/?application_id=aa1e24b44bb69aac50de3419c0c1ac07")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
-      setData(json);
     });
   };
 
@@ -21,7 +20,7 @@ function FetchUser() {
           placeholder="Nickname your comrade"
           className="search-form__nickname"
         />
-    <input type="submit" className="btn" value="Search" onClick={apiGet}/>
+        <input type="submit" className="btn" value="Search" onClick={apiGet}/>
       </form>
       <div className="search-answer">
         <ul className="search-answer__list">
