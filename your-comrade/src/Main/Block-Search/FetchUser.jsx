@@ -64,8 +64,8 @@ import './index.css';
 // 'https://api.worldoftanks.ru/wot/account/achievements/?application_id=aa1e24b44bb69aac50de3419c0c1ac07'
 
 class FetchUser extends Component{
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       error: null,
       isLoaded: false,
@@ -100,7 +100,9 @@ class FetchUser extends Component{
     } else if (!isLoaded) {
       return <p>Loading...</p>
     } else {
-      return <ol>{items.map(item => (<li key={item.account_id}>{item.nickname}</li>))}</ol>
+      return <ol>
+        {items.map(item => (<li key={item.account_id}>{item.nickname}</li>))}
+      </ol>
     }
   }
 }
