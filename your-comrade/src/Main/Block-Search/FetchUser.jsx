@@ -74,13 +74,13 @@ class FetchUser extends Component{
   }
 
   componentDidMount() {
-    fetch("www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")
+    fetch("https://api.worldoftanks.ru/wot/account/list/?application_id=aa1e24b44bb69aac50de3419c0c1ac07")
     .then(res => res.json())
     .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result.drinks
+            items: result.status
           });
         }
       ),
@@ -100,8 +100,9 @@ class FetchUser extends Component{
     } else if (!isLoaded) {
       return <p>Loading...</p>
     } else {
-      return <ol>{items.map(item => (<li key={item.name}>{item.strDrink}</li>))}</ol>
+      return <ol>{items.map(item => (<li key={item.account_id}>{item.nickname}</li>))}</ol>
     }
   }
 }
+
 export default FetchUser;
