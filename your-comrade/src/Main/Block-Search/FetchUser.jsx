@@ -7,7 +7,7 @@ function FetchUser() {
     fetch("https://api.worldoftanks.ru/wot/encyclopedia/tanks/?application_id=aa1e24b44bb69aac50de3419c0c1ac07")
     .then((response) => response.json())
     .then((json) => {
-      console.log(json);
+      setData(json);
     });
   };
 
@@ -25,7 +25,7 @@ function FetchUser() {
       <div className="search-answer">
         <ul className="search-answer__list">
           {data.map((item) => (
-            <li className="search-answer__item" key={item.status}></li>
+            <li className="search-answer__item" key={item.status}>{item.account_id}</li>
           ))}
         </ul>
       </div>
