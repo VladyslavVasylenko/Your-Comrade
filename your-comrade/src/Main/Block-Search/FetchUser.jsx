@@ -101,7 +101,7 @@ class FetchUser extends Component {
       return <div>Загрузка...</div>;
     } else {
         return (
-          <div>
+          <>
             <form className="form-search" onSubmit={this.handleSubmit}>
               <input 
               className="input-field" 
@@ -117,13 +117,13 @@ class FetchUser extends Component {
               value="Search"/>
             </form>
             <ul>
-              {items.map(item => (
+              {/* {items.map(item => (
                 <li key={item.name}>
                   {item.nickname} {item.account_id}
                 </li>
-              ))}
+              ))} */}
             </ul>
-          </div>
+          </>
         );
     }
   }

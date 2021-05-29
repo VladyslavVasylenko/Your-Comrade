@@ -7,7 +7,7 @@ function Header() {
         <ul className="header__list">
           <li className="header__item"><a href="#">Привествие</a></li>
           <li className="header__item"><a href="#">Инструкция</a></li>
-          <li className="header__item"><a href="#">Раздел поиска</a></li>
+          <li className="header__item"><a href="#Search">Раздел поиска</a></li>
           <li className="header__item"><a href="#">Контакты</a></li>
         </ul>
       </div>
@@ -27,7 +27,7 @@ function Header() {
         </div>
       </div>
       <div className="scroll">
-        <a href="#instruction" className="scroll-to"><i className="fas fa-angle-down"></i></a>
+        <a href="#Search" className="scroll-to"><i className="fas fa-angle-down"></i></a>
       </div>
     </div>
   );
