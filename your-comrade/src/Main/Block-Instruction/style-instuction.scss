@@ -1,0 +1,46 @@
+.instuction{
+  width: 100%;
+  height: 1000px;
+  background: url(../../Image/f2.jpg) no-repeat center center;
+}
+
+.instuction__title{
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 3%;
+}
+
+.instuction__list{
+  width: 800px;
+  margin: 0 auto;
+}
+
+.instuction__item{
+  font-size: 18px;
+  color: rgb(241, 158, 50);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 3em rgb(0, 0, 0);
+  padding-bottom: 5%;
+  list-style-type: none;
+}
+
+.instuction__item:hover{
+  animation-name: zoom;
+  animation-duration: 5s;
+  background-color: rgba(240, 248, 255, 0.596);
+  text-align: center;
+  padding: 2.5% 1% 2.5% 1%;
+  color: cyan;
+  transition: 0.5s linear;
+}
+
+@keyframes zoom {
+  0%   {transform: scale(1.0, 1.0);}
+  50%  {transform: scale(1.5, 1.5);}
+  100%  {transform: scale(1.5, 1.5);}
+}
+
+.fa-tools{
+  color: cyan;
+  margin-right: 3%;
+}

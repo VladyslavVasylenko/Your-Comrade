@@ -1,0 +1,74 @@
+.instuction {
+  width: 100%;
+  height: 1000px;
+  background: url(../../Image/f2.jpg) no-repeat center center;
+}
+
+.instuction__title {
+  text-shadow: 1px 1px 2px black, 0 0 1em white;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 3%;
+}
+
+.instuction__list {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.instuction__item {
+  font-size: 18px;
+  color: #f19e32;
+  text-shadow: 1px 1px 2px black, 0 0 3em black;
+  padding-bottom: 5%;
+  list-style-type: none;
+}
+
+.instuction__item:hover {
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  background-color: rgba(240, 248, 255, 0.596);
+  text-align: center;
+  padding: 2.5% 1% 2.5% 1%;
+  color: cyan;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+  }
+  100% {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+  }
+  100% {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+  }
+}
+
+.fa-tools {
+  color: cyan;
+  margin-right: 3%;
+}
+/*# sourceMappingURL=style-instuction.css.map */

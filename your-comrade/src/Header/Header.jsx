@@ -6,7 +6,7 @@ function Header() {
       <div className="header">
         <ul className="header__list">
           <li className="header__item"><a href="#">Привествие</a></li>
-          <li className="header__item"><a href="#">Инструкция</a></li>
+          <li className="header__item"><a href="#Instruction">Инструкция</a></li>
           <li className="header__item"><a href="#Search">Раздел поиска</a></li>
           <li className="header__item"><a href="#">Контакты</a></li>
         </ul>

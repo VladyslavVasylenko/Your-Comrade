@@ -117,11 +117,11 @@ class FetchUser extends Component {
               value="Search"/>
             </form>
             <ul>
-              {/* {items.map(item => (
+              {items.map(item => (
                 <li key={item.name}>
                   {item.nickname} {item.account_id}
                 </li>
-              ))} */}
+              ))}
             </ul>
           </>
         );
