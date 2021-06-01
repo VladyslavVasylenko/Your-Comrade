@@ -11,7 +11,6 @@ class Search extends Component {
   constructor(props) { 
     super(props);
     this.state = {
-      // status: undefined,
       nickname: undefined,
       account_id: undefined,
       error: "",
