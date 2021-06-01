@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class ResultSearch extends Component {
   render() {
     return (
-      <div>
+      <div className="result-search">
         { this.props.nickname &&
           <div>
             <p>Nickname: {this.props.nickname}</p>
