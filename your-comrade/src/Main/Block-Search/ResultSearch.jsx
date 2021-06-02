@@ -10,6 +10,7 @@ class ResultSearch extends Component {
             <p className="result__text subtitle">Account id: {this.props.account_id}</p>
           </div>
         }
+        <p className="result__text subtitle">{this.props.error}</p>
       </div>
       
     )

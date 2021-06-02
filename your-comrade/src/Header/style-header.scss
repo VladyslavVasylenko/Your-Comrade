@@ -43,6 +43,11 @@
   transition: 0.5s linear;
 }
 
+.active{
+    color: rgb(9, 255, 0);
+  transition: 0.5s linear;
+}
+
 //Content block header
 .content-block{
   max-width: 1000px;

@@ -16,7 +16,7 @@ class Search extends Component {
     this.state = {
       nickname: undefined,
       account_id: undefined,
-      error: "",
+      error:"",
     }
   }
 
@@ -56,6 +56,7 @@ class Search extends Component {
           <ResultSearch 
               nickname={this.state.nickname}
               account_id={this.state.account_id}
+              error={this.state.error}
             />
         </div>
       </>
