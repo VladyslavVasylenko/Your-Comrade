@@ -12,7 +12,7 @@ function Header() {
         </ul>
       </div>
       <div className="content-block">
-        <p className="content-block__title">Рады вас привестовавть на портале <span className="content-block__title--color">&#8221;Your Comrade&#8221;</span></p>
+        <p className="content-block__title">Рады вас привестовавть на портале <span className="content-block__title--color"><br/>&#8221;Your Comrade&#8221;</span></p>
         <p className="content-block__slogan">&#10077;В бою нет ничего важнее чем надежный боевой товарищ!&#10078;</p>
         <div className="content-block-text">
           <p className="content-block-text__text">

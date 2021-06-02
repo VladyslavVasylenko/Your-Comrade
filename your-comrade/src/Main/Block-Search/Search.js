@@ -16,7 +16,6 @@ class Search extends Component {
     this.state = {
       nickname: undefined,
       account_id: undefined,
-      frags: undefined,
       error: "",
     }
   }

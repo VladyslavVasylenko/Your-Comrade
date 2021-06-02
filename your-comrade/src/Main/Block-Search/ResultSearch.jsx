@@ -3,11 +3,11 @@ import React, { Component } from "react";
 class ResultSearch extends Component {
   render() {
     return (
-      <div className="result-search">
+      <div className="result">
         { this.props.nickname &&
           <div>
-            <p>Nickname: {this.props.nickname}</p>
-            <p>Account_id: {this.props.account_id}</p>
+            <p className="result__title">Nickname:<span className="result__nickname">{this.props.nickname}</span></p>
+            <p className="result__text subtitle">Account id: {this.props.account_id}</p>
           </div>
         }
       </div>

@@ -1,6 +1,6 @@
 .instuction {
   width: 100%;
-  height: 1000px;
+  max-height: 1000px;
   background: url(../../Image/f2.jpg) no-repeat center center;
 }
 
@@ -12,8 +12,9 @@
 }
 
 .instuction__list {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
+  padding-bottom: 5%;
 }
 
 .instuction__item {
@@ -22,6 +23,7 @@
   text-shadow: 1px 1px 2px black, 0 0 3em black;
   padding-bottom: 5%;
   list-style-type: none;
+  z-index: 1;
 }
 
 .instuction__item:hover {
@@ -30,11 +32,11 @@
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
   background-color: rgba(240, 248, 255, 0.596);
-  text-align: center;
   padding: 2.5% 1% 2.5% 1%;
   color: cyan;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
+  z-index: 2;
 }
 
 @-webkit-keyframes zoom {
@@ -70,5 +72,49 @@
 .fa-tools {
   color: cyan;
   margin-right: 3%;
+}
+
+@media screen and (max-width: 1024px) {
+  .instuction__item:hover {
+    -webkit-animation-name: zoom;
+            animation-name: zoom;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    background-color: rgba(240, 248, 255, 0.596);
+  }
+  @-webkit-keyframes zoom {
+    0% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+    50% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+    100% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+  }
+  @keyframes zoom {
+    0% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+    50% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+    100% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .instuction__list {
+    padding: 0 5% 5% 5%;
+  }
 }
 /*# sourceMappingURL=style-instuction.css.map */
