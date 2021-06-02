@@ -32,15 +32,20 @@ class Search extends Component {
       fetch(`https://api.worldoftanks.ru/wot/account/list/?application_id=${API_KEY}${SEARCH_PARAM}${nickname}`);
       status = await api_url.json();
       console.log(status);
-    }
 
-    this.setState({
-      nickname: status.data.nickname,
-      account_id: status.data.account_id,
-      statistics: status.data.statistics,
-      error: "",
-    });
-    console.log(nickname);
+      this.setState({
+        nickname: status.data.nickname,
+        account_id: status.data.account_id,
+        error: "",
+      });
+      console.log(nickname);
+    } else {
+      this.setState({
+        nickname: undefined,
+        account_id: undefined,
+        error: "Введите никнейм",
+      });
+    }
   }
 
   render() {
