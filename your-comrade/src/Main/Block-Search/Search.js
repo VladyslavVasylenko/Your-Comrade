@@ -4,20 +4,19 @@ import Form from './Form';
 import ResultSearch from './ResultSearch';
 import './index.css';
 
-const API_URL = "https://api.worldoftanks.ru/wot/account/info/?application_id=";
 const API_KEY = "aa1e24b44bb69aac50de3419c0c1ac07";
 const SEARCH_PARAM = '&search=';
 const Account_id = '&account_id=';
-// (`https://api.worldoftanks.ru/wot/account/info/?application_id=${API_KEY}${Account_id}${nickname}`);
+// (`https://api.worldoftanks.ru/wot/account/info/?application_id={API_KEY}${Account_id}${account_id}`);
 // (`https://api.worldoftanks.ru/wot/account/list/?application_id=${API_KEY}${SEARCH_PARAM}${nickname}`);
 
 class Search extends Component {
-  constructor() { 
-    super();
+  constructor(props) { 
+    super(props);
     this.state = {
       nickname: undefined,
       account_id: undefined,
-      statistics: undefined,
+      frags: undefined,
       error: "",
     }
   }
@@ -25,6 +24,7 @@ class Search extends Component {
   gettingResultSearch = async (e) => {
     e.preventDefault();
     let nickname = e.target.elements.nickname.value;
+    let account_id = this.state.account_id;
     let status;
 
     if(nickname) {
@@ -34,11 +34,11 @@ class Search extends Component {
       console.log(status);
 
       this.setState({
-        nickname: status.data.nickname,
-        account_id: status.data.account_id,
+        nickname: status.data[0].nickname,
+        account_id: status.data[0].account_id,
         error: "",
       });
-      console.log(status.data.account_id);
+      // console.log(status.data[0].account_id);
     } else {
       this.setState({
         nickname: undefined,
@@ -54,12 +54,9 @@ class Search extends Component {
         <div className="search__conteiner" id="Search">
           {/* <FetchUser /> */}
           <Form searchMethod={this.gettingResultSearch} />
-        </div>
-        <div>
           <ResultSearch 
               nickname={this.state.nickname}
               account_id={this.state.account_id}
-              statistics={this.state.statistics}
             />
         </div>
       </>
