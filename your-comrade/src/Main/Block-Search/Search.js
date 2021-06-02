@@ -9,7 +9,7 @@ const API_KEY = "aa1e24b44bb69aac50de3419c0c1ac07";
 const SEARCH_PARAM = '&search=';
 const Account_id = '&account_id=';
 // (`https://api.worldoftanks.ru/wot/account/info/?application_id=${API_KEY}${Account_id}${nickname}`);
-      // fetch(`https://api.worldoftanks.ru/wot/account/list/?application_id=${API_KEY}${SEARCH_PARAM}${nickname}`);
+// (`https://api.worldoftanks.ru/wot/account/list/?application_id=${API_KEY}${SEARCH_PARAM}${nickname}`);
 
 class Search extends Component {
   constructor() { 
@@ -38,7 +38,7 @@ class Search extends Component {
         account_id: status.data.account_id,
         error: "",
       });
-      console.log(nickname);
+      console.log(status.data.account_id);
     } else {
       this.setState({
         nickname: undefined,
@@ -53,7 +53,7 @@ class Search extends Component {
       <>
         <div className="search__conteiner" id="Search">
           {/* <FetchUser /> */}
-          <Form ResultSearch={this.gettingResultSearch} />
+          <Form searchMethod={this.gettingResultSearch} />
         </div>
         <div>
           <ResultSearch 
