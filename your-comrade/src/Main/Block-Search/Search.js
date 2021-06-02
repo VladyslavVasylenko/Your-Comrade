@@ -4,8 +4,12 @@ import Form from './Form';
 import ResultSearch from './ResultSearch';
 import './index.css';
 
+const API_URL = "https://api.worldoftanks.ru/wot/account/info/?application_id=";
 const API_KEY = "aa1e24b44bb69aac50de3419c0c1ac07";
 const SEARCH_PARAM = '&search=';
+const Account_id = '&account_id=';
+// (`https://api.worldoftanks.ru/wot/account/info/?application_id=${API_KEY}${Account_id}${nickname}`);
+      // fetch(`https://api.worldoftanks.ru/wot/account/list/?application_id=${API_KEY}${SEARCH_PARAM}${nickname}`);
 
 class Search extends Component {
   constructor() { 
@@ -13,6 +17,7 @@ class Search extends Component {
     this.state = {
       nickname: undefined,
       account_id: undefined,
+      statistics: undefined,
       error: "",
     }
   }
@@ -29,15 +34,14 @@ class Search extends Component {
       console.log(status);
     }
 
-      this.setState({
-        nickname: status.data.nickname,
-        account_id: status.data.account_id,
-        error: "",
-      });
-      console.log(nickname);
+    this.setState({
+      nickname: status.data.nickname,
+      account_id: status.data.account_id,
+      statistics: status.data.statistics,
+      error: "",
+    });
+    console.log(nickname);
   }
-
-
 
   render() {
     return (
@@ -50,6 +54,7 @@ class Search extends Component {
           <ResultSearch 
               nickname={this.state.nickname}
               account_id={this.state.account_id}
+              statistics={this.state.statistics}
             />
         </div>
       </>

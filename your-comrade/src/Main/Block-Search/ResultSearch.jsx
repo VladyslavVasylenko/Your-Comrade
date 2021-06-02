@@ -8,6 +8,7 @@ class ResultSearch extends Component {
           <div>
             <p>Nickname: {this.props.nickname}</p>
             <p>Account_id: {this.props.account_id}</p>
+            <p>Statistics: {this.props.statistics}</p>
           </div>
         }
       </div>
