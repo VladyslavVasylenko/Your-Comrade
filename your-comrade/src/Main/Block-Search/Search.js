@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Form from './Form';
 import ResultSearch from './ResultSearch';
 import './index.css';
+import Statistics from './Statistics';
 
 const API_KEY = "aa1e24b44bb69aac50de3419c0c1ac07";
 const SEARCH_PARAM = '&search=';
@@ -23,7 +24,6 @@ class Search extends Component {
   gettingResultSearch = async (e) => {
     e.preventDefault();
     let nickname = e.target.elements.nickname.value;
-    let account_id = this.state.account_id;
     let status;
 
     if(nickname) {
@@ -57,6 +57,9 @@ class Search extends Component {
               nickname={this.state.nickname}
               account_id={this.state.account_id}
               error={this.state.error}
+            />
+            <Statistics 
+              account_id={this.state.account_id}
             />
         </div>
       </>
