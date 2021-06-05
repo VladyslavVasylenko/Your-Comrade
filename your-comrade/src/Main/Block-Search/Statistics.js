@@ -16,7 +16,7 @@ class Statistics extends Component {
       .then(
         (status) => {
           this.setState ({
-            global_rating: status.global_rating,
+            global_rating: status.data?.global_rating,
           });
         },
         (error) => {
@@ -39,21 +39,6 @@ class Statistics extends Component {
         />
       )
     }
-  //   const { error } = this.state;
-  //   console.log(this.state.global_rating);
-  //   if (error) {
-  //     return <p className="result__text subtitle">{this.state.error}</p>;
-  //   } else {
-  //     return (
-  //       <div>
-  //       { this.props.global_rating &&
-  //         <div>
-  //           <p className="result__text subtitle">Global rating: {this.props.global_rating}</p>
-  //         </div>
-  //       }
-  //       </div>
-  //     )
-  //   }
   }
 }
 

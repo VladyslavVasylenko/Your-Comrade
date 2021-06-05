@@ -7,8 +7,7 @@ import Statistics from './Statistics';
 
 const API_KEY = "aa1e24b44bb69aac50de3419c0c1ac07";
 const SEARCH_PARAM = '&search=';
-const Account_id = '&account_id=';
-// (`https://api.worldoftanks.ru/wot/account/info/?application_id={API_KEY}${Account_id}${account_id}`);
+
 // (`https://api.worldoftanks.ru/wot/account/list/?application_id=${API_KEY}${SEARCH_PARAM}${nickname}`);
 
 class Search extends Component {
