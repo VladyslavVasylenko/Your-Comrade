@@ -12,19 +12,20 @@ class Statistics extends Component {
 
   componentDidMount() {
     fetch(`https://api.worldoftanks.ru/wot/account/info/?application_id=aa1e24b44bb69aac50de3419c0c1ac07&account_id=${this.props.account_id}`)
-      .then(res => res.json())
+      .then(response => response.json())
       .then(
         (status) => {
           this.setState ({
-            global_rating: status.data?.global_rating,
+            global_rating: status.global_rating,
           });
+          console.log(status);
         },
         (error) => {
           this.setState({
             error
           });
         }
-      )      
+      )
   }
 
   render() {
