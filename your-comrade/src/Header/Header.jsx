@@ -8,7 +8,8 @@ function Header() {
           <li className="header__item"><a href="#">Привествие</a></li>
           <li className="header__item"><a href="#Instruction">Инструкция</a></li>
           <li className="header__item"><a href="#Search">Раздел поиска</a></li>
-          <li className="header__item"><a href="#">Контакты</a></li>
+          <li className="header__item"><a href="#Chat">Чат</a></li>
+          <li className="header__item"><a href="#Contact">Контакты</a></li>
         </ul>
       </div>
       <div className="content-block">
