@@ -1,11 +1,12 @@
 .contact {
   width: 100%;
-  height: 800px;
+  height: 900px;
   background: url(../../Image/fun.jpg)no-repeat center center;
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-self: center;
+  background-color: black;
 }
 
 /* Contact */
@@ -92,6 +93,7 @@
 
   &:hover{
     padding: 5px 100px 100px 5px;
+    transition: 0.5s linear;
   }
 }
 
