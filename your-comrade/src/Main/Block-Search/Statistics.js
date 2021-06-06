@@ -5,8 +5,8 @@ class Statistics extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      global_rating: undefined,
-      error: undefined,
+      global_rating: null,
+      error: null,
     };
   }
 
