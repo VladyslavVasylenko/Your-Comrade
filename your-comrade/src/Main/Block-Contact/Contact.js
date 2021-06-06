@@ -2,13 +2,12 @@ import './contact.css';
 
 function Contact() {
   return(
-    <div className="contact">
+    <div className="contact" id="Contact">
       <div className="conteiner-contact">
-        <p className="contact__mail">vladyslavvasylenko03@gmail.com</p>
-        <p className="contact__phone">+380668047228</p>
-        <p className="contact__inst"><a href="vladyslavvasylenko0312"><i className="fab fa-instagram-square"></i></a></p>
-        <p className="contact__In"><a href="https://www.linkedin.com/in/vladyslav-
-vasylenko/"><i className="fab fa-linkedin-in"></i></a></p>
+        <p className="contact__mail"><a className="contact__mail" href="https://www.google.com/intl/uk/gmail/about/">vladyslavvasylenko03@gmail.com</a></p>
+        <p className="contact__phone"><a className="contact__phone" href="tel:++380668047228">+380668047228</a></p>
+        <p className="contact__inst"><a href="https://www.instagram.com/vladyslavvasylenko0312/" target="blank"><i className="fab fa-instagram"></i></a></p>
+        <p className="contact__In"><a href="https://www.linkedin.com/in/vladyslav-vasylenko-5600301a6/" target="blank"><i className="fab fa-linkedin-in"></i></a></p>
       </div>
       <div className="container-form">
       <form className="form">
