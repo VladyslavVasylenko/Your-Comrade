@@ -19,6 +19,7 @@ class Search extends Component {
       max_damage: null,
       max_frags: null,
       survived_battles: null,
+      max_xp: null,
       error:"",
     }
   }
@@ -51,6 +52,7 @@ class Search extends Component {
         max_damage: status.data && resultStastistics.data[accountId].statistics.all.max_damage,
         max_frags: status.data && resultStastistics.data[accountId].statistics.all.max_frags,
         survived_battles: status.data && resultStastistics.data[accountId].statistics.all.survived_battles,
+        max_xp: status.data && resultStastistics.data[accountId].statistics.all.max_xp,
         error: "",
       });
     } else {
@@ -62,6 +64,7 @@ class Search extends Component {
         max_damage: null,
         max_frags: null,
         survived_battles: null,
+        max_xp: null,
         error: "Введите никнейм",
       });
     }
@@ -81,6 +84,7 @@ class Search extends Component {
               max_damage={this.state.max_damage}
               max_frags={this.state.max_frags}
               survived_battles={this.state.survived_battles}
+              max_xp={this.state.max_xp}
               error={this.state.error}
             />
         </div>
