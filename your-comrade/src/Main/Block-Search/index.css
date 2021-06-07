@@ -92,11 +92,12 @@
 
 .subtitle {
   text-align: center;
+  padding-bottom: 5%;
 }
 
 .result__text {
-  color: #e5ff00;
-  text-shadow: 1px 1px 2px black, 0 0 1em #1b1919;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px black, 0 0 2em black;
   text-transform: uppercase;
   font-size: 20px;
   letter-spacing: 5px;
@@ -115,5 +116,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.result-conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=index.css.map */

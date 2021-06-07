@@ -19,7 +19,7 @@
 
 .instuction__item {
   font-size: 18px;
-  color: #f19e32;
+  color: white;
   text-shadow: 1px 1px 2px black, 0 0 3em black;
   padding-bottom: 5%;
   list-style-type: none;
@@ -49,8 +49,8 @@
             transform: scale(1.5, 1.5);
   }
   100% {
-    -webkit-transform: scale(1.5, 1.5);
-            transform: scale(1.5, 1.5);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 
@@ -64,8 +64,8 @@
             transform: scale(1.5, 1.5);
   }
   100% {
-    -webkit-transform: scale(1.5, 1.5);
-            transform: scale(1.5, 1.5);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 

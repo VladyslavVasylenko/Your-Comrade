@@ -8,10 +8,16 @@ class ResultSearch extends Component {
           <div>
             <p className="result__title">Nickname:<span className="result__nickname">{this.props.nickname}</span></p>
             <p className="result__text subtitle">Account id: {this.props.account_id}</p>
-            <p className="result__text">Global rating: {this.props.global_rating}</p>
+            <div className="result-conteiner">
+              <p className="result__text">Личный рейтинг: {this.props.global_rating}</p>
+              <p className="result__text">Battles: {this.props.battles}</p>
+              <p className="result__text">Max Damage: {this.props.max_damage}</p>
+              <p className="result__text">Max Frags: {this.props.max_frags}</p>
+              <p className="result__text">Survived Battles: {this.props.survived_battles}</p>
+            </div>
           </div>
         }
-        <p className="result__text subtitle">{this.props.error}</p>
+        <p className="result__title">{this.props.error}</p>
       </div>
     )
   }

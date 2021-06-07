@@ -19,7 +19,7 @@
 
 .instuction__item{
   font-size: 18px;
-  color: rgb(241, 158, 50);
+  color: rgb(255, 255, 255);
   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 3em rgb(0, 0, 0);
   padding-bottom: 5%;
   list-style-type: none;
@@ -40,7 +40,7 @@
 @keyframes zoom {
   0%   {transform: scale(1.0, 1.0);}
   50%  {transform: scale(1.5, 1.5);}
-  100%  {transform: scale(1.5, 1.5);}
+  100%  {transform: scale(1.0, 1.0);}
 }
 
 .fa-tools{

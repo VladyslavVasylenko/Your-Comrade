@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Form from './Form';
 import ResultSearch from './ResultSearch';
 import './index.css';
-import Statistics from './Statistics';
 
 const API_KEY = "aa1e24b44bb69aac50de3419c0c1ac07";
 const SEARCH_PARAM = '&search=';
@@ -16,6 +15,10 @@ class Search extends Component {
       nickname: null,
       account_id: null,
       global_rating: null,
+      battles: null,
+      max_damage: null,
+      max_frags: null,
+      survived_battles: null,
       error:"",
     }
   }
@@ -23,7 +26,6 @@ class Search extends Component {
   getSearchResult = async (e) => {
     e.preventDefault();
     const nickname = e.target.elements.nickname.value;
-    // let status;
 
     if(nickname) {
       const apiUrl = await fetch(
@@ -34,26 +36,32 @@ class Search extends Component {
 
       const accountId = status.data && status.data[0].account_id;
 
-      // сделать запрос на получение статистики
       const stastistics = await fetch(
         `https://api.worldoftanks.ru/wot/account/info/?application_id=aa1e24b44bb69aac50de3419c0c1ac07&account_id=${accountId}`
       );
       const resultStastistics = await stastistics.json();
       console.log(resultStastistics);
-      // console.log(resultStastistics.data);
+      const errorMessage = "<p>Внимание игрока с таким ником не зарегистрировано!";
 
       this.setState({
         nickname: status.data && status.data[0].nickname,
         account_id: status.data && status.data[0].account_id,
         global_rating: status.data && resultStastistics.data[accountId].global_rating,
+        battles: status.data && resultStastistics.data[accountId].statistics.all.battles,
+        max_damage: status.data && resultStastistics.data[accountId].statistics.all.max_damage,
+        max_frags: status.data && resultStastistics.data[accountId].statistics.all.max_frags,
+        survived_battles: status.data && resultStastistics.data[accountId].statistics.all.survived_battles,
         error: "",
       });
-      // console.log(status.data[0].account_id);
     } else {
       this.setState({
         nickname: null,
         account_id: null,
-        global_rating:null,
+        global_rating: null,
+        battles: null,
+        max_damage: null,
+        max_frags: null,
+        survived_battles: null,
         error: "Введите никнейм",
       });
     }
@@ -69,11 +77,12 @@ class Search extends Component {
               nickname={this.state.nickname}
               account_id={this.state.account_id}
               global_rating={this.state.global_rating}
+              battles={this.state.battles}
+              max_damage={this.state.max_damage}
+              max_frags={this.state.max_frags}
+              survived_battles={this.state.survived_battles}
               error={this.state.error}
             />
-            {/* <Statistics 
-              account_id={this.state.account_id}
-            /> */}
         </div>
       </>
     );
