@@ -6,8 +6,6 @@ import './index.css';
 const API_KEY = "aa1e24b44bb69aac50de3419c0c1ac07";
 const SEARCH_PARAM = '&search=';
 
-// (`https://api.worldoftanks.ru/wot/account/list/?application_id=${API_KEY}${SEARCH_PARAM}${nickname}`);
-
 class Search extends Component {
   constructor(props) { 
     super(props);
@@ -74,7 +72,6 @@ class Search extends Component {
     return (
       <>
         <div className="search__conteiner" id="Search">
-          {/* <FetchUser /> */}
           <Form searchMethod={this.getSearchResult} />
           <ResultSearch 
               nickname={this.state.nickname}
