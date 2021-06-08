@@ -44,9 +44,13 @@
 }
 
 .active{
-    color: rgb(9, 255, 0);
+  color: rgb(9, 255, 0);
   transition: 0.5s linear;
 }
+
+.header-burger{}
+
+.header-burger__line{}
 
 //Content block header
 .content-block{
@@ -149,5 +153,5 @@
 }
 
 @media screen and (max-width: 760px){
-  
+
 }
