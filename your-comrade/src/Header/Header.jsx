@@ -4,11 +4,11 @@ function Header() {
   return (
     <div className="conteiner">
       <div className="header">
-        <div className="header-burger">
+        {/* <div className="header-burger">
           <li  className="header-burger__line"></li>
           <li  className="header-burger__line"></li>
           <li  className="header-burger__line"></li>
-        </div>
+        </div> */}
         <ul className="header__list">
           <li className="header__item active"><a href="#">Привествие</a></li>
           <li className="header__item"><a href="#Instruction">Инструкция</a></li>
