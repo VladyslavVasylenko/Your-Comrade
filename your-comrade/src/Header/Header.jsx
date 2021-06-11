@@ -1,14 +1,11 @@
+
 import './style-header.css';
 
 function Header() {
   return (
     <div className="conteiner">
-      <div className="header">
-        {/* <div className="header-burger">
-          <li  className="header-burger__line"></li>
-          <li  className="header-burger__line"></li>
-          <li  className="header-burger__line"></li>
-        </div> */}
+      {/* <div className="header">
+
         <ul className="header__list">
           <li className="header__item active"><a href="#">Привествие</a></li>
           <li className="header__item"><a href="#Instruction">Инструкция</a></li>
@@ -16,7 +13,9 @@ function Header() {
           <li className="header__item"><a href="#Chat">Чат</a></li>
           <li className="header__item"><a href="#Contact">Контакты</a></li>
         </ul>
-      </div>
+
+      </div> */}
+
       <div className="content-block">
         <p className="content-block__title">Рады вас привестовавть на портале <span className="content-block__title--color"><br/>&#8221;Your Comrade&#8221;</span></p>
         <p className="content-block__slogan">&#10077;В бою нет ничего важнее чем надежный боевой товарищ!&#10078;</p>
@@ -33,7 +32,7 @@ function Header() {
         </div>
       </div>
       <div className="scroll">
-        <a href="#Search" className="scroll-to"><i className="fas fa-angle-down"></i></a>
+        <a href="/Search" className="scroll-to"><i className="fas fa-angle-down"></i></a>
       </div>
     </div>
   );

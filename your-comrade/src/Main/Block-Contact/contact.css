@@ -142,4 +142,22 @@
   -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
           transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 }
+
+@media screen and (max-width: 700px) {
+  .contact {
+    width: 100%;
+    height: 500px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 5%;
+  }
+  .conteiner-contact {
+    padding-bottom: 10%;
+  }
+}
 /*# sourceMappingURL=contact.css.map */

@@ -9,11 +9,12 @@ function Contact() {
         <p className="contact__inst"><a href="https://www.instagram.com/vladyslavvasylenko0312/" target="blank"><i className="fab fa-instagram"></i></a></p>
         <p className="contact__In"><a href="https://www.linkedin.com/in/vladyslav-vasylenko-5600301a6/" target="blank"><i className="fab fa-linkedin-in"></i></a></p>
       </div>
+      
       <div className="container-form">
-      <form className="form">
-        <input className="form__message" type="text" name="message" placeholder="Ваше сообщение"/>
-        <button className="form__btn">Отправить</button>
-      </form>
+        <form className="form">
+          <input className="form__message" type="text" name="message" placeholder="Ваше сообщение"/>
+          <button className="form__btn">Отправить</button>
+        </form>
       </div>
     </div>
   );

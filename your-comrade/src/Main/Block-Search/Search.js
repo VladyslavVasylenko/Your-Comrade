@@ -40,7 +40,7 @@ class Search extends Component {
       );
       const resultStastistics = await stastistics.json();
       console.log(resultStastistics);
-      const errorMessage = "<p>Внимание игрока с таким ником не зарегистрировано!";
+      // const errorMessage = "<p>Внимание игрока с таким ником не зарегистрировано!";
 
       this.setState({
         nickname: status.data && status.data[0].nickname,

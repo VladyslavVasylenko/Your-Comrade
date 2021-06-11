@@ -119,3 +119,18 @@
     transition-timing-function: cubic-bezier(.5, 0, .5, 1);
   }
 }
+
+@media screen and (max-width:700px) {
+  .contact {
+    width: 100%;
+    height: 500px;
+    // background: url(../../Image/fun.jpg)no-repeat center center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+  }
+
+  .conteiner-contact{
+    padding-bottom: 10%;
+  }
+}
