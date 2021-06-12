@@ -76,6 +76,13 @@
   padding-top: 350px;
 }
 
+.result__box {
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.603);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.897);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.897);
+}
+
 .result__title {
   color: #e5ff00;
   text-shadow: 1px 1px 2px black, 0 0 1em #1b1919;

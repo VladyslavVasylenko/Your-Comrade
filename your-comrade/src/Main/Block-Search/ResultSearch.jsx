@@ -5,7 +5,7 @@ class ResultSearch extends Component {
     return (
       <div className="result">
         { this.props.nickname &&
-          <div>
+          <div className="result__box">
             <p className="result__title">Nickname: <span className="result__nickname">{this.props.nickname}</span></p>
             <p className="result__text subtitle">Account id: <span className="result__nickname">{this.props.account_id}</span></p>
             <div className="result-conteiner">
