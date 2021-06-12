@@ -2,6 +2,7 @@ import Header from './Header/Header';
 import Search from './Main/Block-Search/Search';
 import Instruction from './Main/Block-Instruction/Instruction';
 import Contact from './Main/Block-Contact/Contact';
+import Chat from './Main/Block-Chat/Chat';
 
 import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom';
 
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/" component={Header}/>
           <Route path="/Search" component={Search}/>
           <Route path="/Instruction" component={Instruction}/>
+          <Route path="/Chat" component={Chat}/>
           <Route path="/Contact" component={Contact}/>
         </Switch>
       </Router>

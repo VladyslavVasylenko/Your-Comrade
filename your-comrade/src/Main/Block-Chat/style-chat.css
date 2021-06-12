@@ -1,0 +1,18 @@
+.chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chat__title {
+  padding-top: 15%;
+  color: white;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgba(0, 0, 0, 0.459);
+  padding-bottom: 5%;
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=style-chat.css.map */

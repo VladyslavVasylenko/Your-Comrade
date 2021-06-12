@@ -57,7 +57,12 @@ class Search extends Component {
   }
 
   render() {
-    const errorMessage = <div className="result"><p className="result__title">Внимание игрока с таким ником не зарегистрировано!</p></div>;
+    const errorMessage = 
+      <div className="result">
+        <div className="result__box">
+          <p className="result__title">Внимание игрока с таким ником не зарегистрировано!</p>
+        </div>
+      </div>;
     return (
       <>
         <div className="search__conteiner" id="Search">
