@@ -9,10 +9,6 @@ import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      {/* <Header />
-      <Search />
-      <Instruction/>
-      <Contact/> */}
       <Router>
       
         <div className="header">
