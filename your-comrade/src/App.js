@@ -13,15 +13,17 @@ function App() {
       <Instruction/>
       <Contact/> */}
       <Router>
+      
         <div className="header">
-          <ul className="header__list">
-            <li exact="true" className="header__item"><NavLink to="/" activeClassName="active">Привествие</NavLink></li>
-            <li className="header__item"><NavLink to="/Instruction" activeClassName="active">Инструкция</NavLink></li>
-            <li className="header__item"><NavLink to="/Search" activeClassName="active">Раздел поиска</NavLink></li>
-            <li className="header__item"><NavLink to="/Chat" activeClassName="active">Чат</NavLink></li>
-            <li className="header__item"><NavLink to="/Contact" activeClassName="active">Контакты</NavLink></li>
-          </ul>
+          <nav className="header__list">
+            <NavLink exact to="/" className="header__item" activeClassName="active">Привествие</NavLink>
+            <NavLink to="/Instruction" className="header__item" activeClassName="active">Инструкция</NavLink>
+            <NavLink to="/Search" className="header__item" activeClassName="active">Поиск</NavLink>
+            <NavLink to="/Chat" className="header__item" activeClassName="active">Чат</NavLink>
+            <NavLink to="/Contact" className="header__item" activeClassName="active">Контакты</NavLink>
+          </nav>
         </div>
+
         <Switch>
           <Route exact path="/" component={Header}/>
           <Route path="/Search" component={Search}/>

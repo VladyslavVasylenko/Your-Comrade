@@ -39,43 +39,32 @@ class Search extends Component {
         `https://api.worldoftanks.ru/wot/account/info/?application_id=aa1e24b44bb69aac50de3419c0c1ac07&account_id=${accountId}`
       );
       const resultStastistics = await stastistics.json();
-      console.log(resultStastistics);
-      // const errorMessage = "<p>Внимание игрока с таким ником не зарегистрировано!";
 
-      this.setState({
-        nickname: status.data && status.data[0].nickname,
-        account_id: status.data && status.data[0].account_id,
-        global_rating: status.data && resultStastistics.data[accountId].global_rating,
-        battles: status.data && resultStastistics.data[accountId].statistics.all.battles,
-        max_damage: status.data && resultStastistics.data[accountId].statistics.all.max_damage,
-        max_frags: status.data && resultStastistics.data[accountId].statistics.all.max_frags,
-        survived_battles: status.data && resultStastistics.data[accountId].statistics.all.survived_battles,
-        max_xp: status.data && resultStastistics.data[accountId].statistics.all.max_xp,
-        error: "",
-      });
-    } else {
-      this.setState({
-        nickname: null,
-        account_id: null,
-        global_rating: null,
-        battles: null,
-        max_damage: null,
-        max_frags: null,
-        survived_battles: null,
-        max_xp: null,
-        error: "Введите никнейм",
-      });
+      if (accountId && status.data.length > 0) {
+        this.setState({
+          nickname: status.data[0].nickname,
+          account_id: status.data[0].account_id,
+          global_rating: resultStastistics.data[accountId].global_rating,
+          battles: resultStastistics.data[accountId].statistics.all.battles,
+          max_damage: resultStastistics.data[accountId].statistics.all.max_damage,
+          max_frags: resultStastistics.data[accountId].statistics.all.max_frags,
+          survived_battles: resultStastistics.data[accountId].statistics.all.survived_battles,
+          max_xp: resultStastistics.data[accountId].statistics.all.max_xp,
+          error: "",
+        });
+      }
     }
   }
 
   render() {
+    const errorMessage = <div className="result"><p className="result__title">Внимание игрока с таким ником не зарегистрировано!</p></div>;
     return (
       <>
         <div className="search__conteiner" id="Search">
           <Form searchMethod={this.getSearchResult} />
-          <ResultSearch 
+          {this.state.account_id && (<ResultSearch 
               nickname={this.state.nickname}
-              account_id={this.state.account_id}
+              account_id={this.state.account_id} 
               global_rating={this.state.global_rating}
               battles={this.state.battles}
               max_damage={this.state.max_damage}
@@ -84,6 +73,8 @@ class Search extends Component {
               max_xp={this.state.max_xp}
               error={this.state.error}
             />
+          )}
+          {!this.state.account_id && errorMessage}
         </div>
       </>
     );
