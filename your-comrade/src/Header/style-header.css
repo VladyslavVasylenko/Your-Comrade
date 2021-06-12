@@ -8,8 +8,6 @@
   width: 100%;
   height: 50px;
   margin: 0 auto;
-  position: fixed;
-  overflow: hidden;
   background-color: black;
   z-index: 10;
 }
@@ -22,6 +20,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .header__item {
@@ -36,6 +35,7 @@
 .header__item a {
   text-decoration: none;
   color: #fff;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 1px 1px 2px black, 0 0 1em #1b1919;
@@ -169,5 +169,40 @@
   border: solid 1px aqua;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .header__list {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .header__item {
+    list-style-type: none;
+    padding-bottom: 10%;
+    padding-right: 0;
+  }
+  .header__item:last-child {
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .header__item a {
+    font-size: 24px;
+  }
 }
 /*# sourceMappingURL=style-header.css.map */

@@ -2,7 +2,6 @@ import Header from './Header/Header';
 import Search from './Main/Block-Search/Search';
 import Instruction from './Main/Block-Instruction/Instruction';
 import Contact from './Main/Block-Contact/Contact';
-// import Footer from './Footer/Footer'
 
 import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom';
 
@@ -14,13 +13,15 @@ function App() {
       <Instruction/>
       <Contact/> */}
       <Router>
-        <ul className="header__list">
-          <li className="header__item"><NavLink to="/" exact>Привествие</NavLink></li>
-          <li className="header__item"><NavLink to="/Instruction">Инструкция</NavLink></li>
-          <li className="header__item"><NavLink to="/Search">Раздел поиска</NavLink></li>
-          <li className="header__item"><NavLink to="/Chat">Чат</NavLink></li>
-          <li className="header__item"><NavLink to="/Contact">Контакты</NavLink></li>
-        </ul>
+        <div className="header">
+          <ul className="header__list">
+            <li exact="true" className="header__item"><NavLink to="/" activeClassName="active">Привествие</NavLink></li>
+            <li className="header__item"><NavLink to="/Instruction" activeClassName="active">Инструкция</NavLink></li>
+            <li className="header__item"><NavLink to="/Search" activeClassName="active">Раздел поиска</NavLink></li>
+            <li className="header__item"><NavLink to="/Chat" activeClassName="active">Чат</NavLink></li>
+            <li className="header__item"><NavLink to="/Contact" activeClassName="active">Контакты</NavLink></li>
+          </ul>
+        </div>
         <Switch>
           <Route exact path="/" component={Header}/>
           <Route path="/Search" component={Search}/>
