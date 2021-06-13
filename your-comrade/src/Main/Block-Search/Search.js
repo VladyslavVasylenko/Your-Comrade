@@ -18,6 +18,8 @@ class Search extends Component {
       max_frags: null,
       survived_battles: null,
       max_xp: null,
+      damage_dealt: null,
+      averageDamage: null,
       error:"",
     }
   }
@@ -50,8 +52,11 @@ class Search extends Component {
           max_frags: resultStastistics.data[accountId].statistics.all.max_frags,
           survived_battles: resultStastistics.data[accountId].statistics.all.survived_battles,
           max_xp: resultStastistics.data[accountId].statistics.all.max_xp,
+          damage_dealt: resultStastistics.data[accountId].statistics.all.damage_dealt,
+          averageDamage: Math.round(resultStastistics.data[accountId].statistics.all.damage_dealt / resultStastistics.data[accountId].statistics.all.battles),
           error: "",
         });
+
       }
     }
   }
@@ -76,6 +81,7 @@ class Search extends Component {
               max_frags={this.state.max_frags}
               survived_battles={this.state.survived_battles}
               max_xp={this.state.max_xp}
+              averageDamage={this.state.averageDamage}
               error={this.state.error}
             />
           )}
