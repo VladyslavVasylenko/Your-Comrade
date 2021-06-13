@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-      
         <div className="header">
           <nav className="header__list">
             <NavLink exact to="/" className="header__item" activeClassName="active">Привествие</NavLink>

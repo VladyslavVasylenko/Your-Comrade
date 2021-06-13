@@ -148,7 +148,6 @@
   .contact {
     width: 100%;
     height: 500px;
-    background: url(../../Image/fun.jpg) no-repeat center center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
