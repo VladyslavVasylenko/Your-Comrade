@@ -3,17 +3,6 @@ import './style-header.css';
 function Header() {
   return (
     <div className="conteiner">
-      {/* <div className="header">
-
-        <ul className="header__list">
-          <li className="header__item active"><a href="#">Привествие</a></li>
-          <li className="header__item"><a href="#Instruction">Инструкция</a></li>
-          <li className="header__item"><a href="#Search">Раздел поиска</a></li>
-          <li className="header__item"><a href="#Chat">Чат</a></li>
-          <li className="header__item"><a href="#Contact">Контакты</a></li>
-        </ul>
-
-      </div> */}
 
       <div className="content-block">
         <p className="content-block__title">Рады вас привестовавть на портале <span className="content-block__title--color"><br/>&#8221;Your Comrade&#8221;</span></p>
