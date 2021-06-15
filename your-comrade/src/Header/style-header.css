@@ -2,6 +2,8 @@
   width: 100%;
   height: 885px;
   background: url(../Image/1920x900_f0qcvys.jpg) no-repeat center center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .header {
