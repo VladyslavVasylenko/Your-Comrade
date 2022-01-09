@@ -2,7 +2,7 @@
   "name": "your-comrade",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://vladyslavvasylenko.github.io/Your-Comrade/",
+  "homepage":"https://vladyslavvasylenko.github.io/Y-C/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
