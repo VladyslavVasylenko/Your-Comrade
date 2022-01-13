@@ -10,7 +10,7 @@ class ResultSearch extends Component {
             <p className="result__text subtitle">Account id: <span className="result__nickname">{this.props.account_id}</span></p>
             
             <div className="result-conteiner">
-              <p className="result__text">Личный рейтинг: <span  className="result__nickname">{this.props.global_rating}</span></p>
+              <p className="result__text">Личный рейтинг: <span className="result__nickname">{this.props.global_rating}</span></p>
               <p className="result__text">Количество боёв: <span className="result__nickname">{this.props.battles}</span></p>
               <p className="result__text">Максимальный урон за бой: <span className="result__nickname">{this.props.max_damage}</span></p>
               <p className="result__text">Максимум уничтожено за бой: <span className="result__nickname">{this.props.max_frags}</span></p>

@@ -1,13 +1,6 @@
 import './style-header.css';
 
-function timerText (a, b, c) {
-  setTimeout(a, 1000);
-  setTimeout(b, 3000);
-  setTimeout(c, 5000);
-};
-
 function Header() {
-  timerText();
   return (
     <div className="conteiner">
       <div className="content-block">
@@ -17,21 +10,23 @@ function Header() {
 
         <div className="content-block-text">
           <p className="content-block-text__text">
-          <i className="fas fa-ellipsis-h"></i> На данном портале вы сможете подобрать себе боевого товарища. 
+            <i className="fas fa-ellipsis-h"></i> На данном портале вы сможете подобрать себе боевого товарища. 
           </p>
 
           <p className="content-block-text__text">
-          <i className="fas fa-ellipsis-h"></i> Предварительно посмотрев его скилл. Всё что вам нужно знать это: &#8275;его никнейм&#8275;.
+            <i className="fas fa-ellipsis-h"></i> Предварительно посмотрев его скилл. Всё что вам нужно знать это: &#8275;его никнейм&#8275;.
           </p>
 
           <p className="content-block-text__text">
-          <i className="fas fa-ellipsis-h"></i> В разделе инструкция вы сможете ознакомится с вспомогательными указателями где?, как искать?, что вводить?
+            <i className="fas fa-ellipsis-h"></i> В разделе инструкция вы сможете ознакомится с вспомогательными указателями где?, как искать?, что вводить?
           </p>
         </div>
       </div>
 
       <div className="scroll">
-        <a href="/Search" className="scroll-to"><i className="fas fa-angle-down"></i></a>
+        <a href="/Search" className="scroll-to">
+          <i className="fas fa-angle-down"></i>
+        </a>
       </div>
     </div>
   );
