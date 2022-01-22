@@ -20,6 +20,7 @@ class Search extends Component {
       max_xp: null,
       damage_dealt: null,
       averageDamage: null,
+      statistics_wins: null,
       error: '',
     }
   }
@@ -53,6 +54,7 @@ class Search extends Component {
         survived_battles: status.data && resultStastistics.data[accountId].statistics.all.survived_battles,
         max_xp: status.data && resultStastistics.data[accountId].statistics.all.max_xp,
         averageDamage: Math.round(resultStastistics.data[accountId].statistics.all.damage_dealt / resultStastistics.data[accountId].statistics.all.battles),
+        statistics_wins: (status.data && resultStastistics.data[accountId].statistics.all.wins / resultStastistics.data[accountId].statistics.all.battles).toFixed(3) * 100,
         error: '',
       });
     } else if (nickname === undefined) {
@@ -65,6 +67,7 @@ class Search extends Component {
           max_frags: null,
           survived_battles: null,
           max_xp: null,
+          statistics_wins: null,
           error: 'Внимание игрока с таким ником не зарегистрировано!',
         });
     } else {
@@ -77,6 +80,7 @@ class Search extends Component {
           max_frags: null,
           survived_battles: null,
           max_xp: null,
+          statistics_wins: null,
           error: 'Введите никнейм',
         });
       }
@@ -97,6 +101,7 @@ class Search extends Component {
             survived_battles={this.state.survived_battles}
             max_xp={this.state.max_xp}
             averageDamage={this.state.averageDamage}
+            statistics_wins={this.state.statistics_wins}
             error={this.state.error}
             />
         </div>

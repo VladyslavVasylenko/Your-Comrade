@@ -24,7 +24,7 @@ function Header() {
       </div>
 
       <div className="scroll">
-        <a href="/Search" className="scroll-to">
+        <a href="https://wbf.netlify.app/" className="scroll-to">
           <i className="fas fa-angle-down"></i>
         </a>
       </div>
